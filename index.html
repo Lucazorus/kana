@@ -1,0 +1,1640 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kana</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kana">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#eef0ec" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171f" media="(prefers-color-scheme: dark)">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Grille de manuel scolaire : cases nettes sur papier froid, encre indigo, maîtrise en dégradé matcha. */
+:root{
+  --papier:#eef0ec;
+  --feuille:#f8f9f6;
+  --encre:#1c2130;
+  --encre-2:#5d6473;
+  --trait:#d5d9d2;
+  --ai:#2b4a8b;
+  --ai-doux:#dfe5f1;
+  --rate:#b4442f;
+  --dur:#a8761c;
+  --bien:#3f7d4e;
+  --facile:#2b4a8b;
+  --m0:transparent;
+  --m1:#ebe3c9;
+  --m2:#dbe5c2;
+  --m3:#c3d9a6;
+  --m4:#a2c784;
+  --m5:#7fb066;
+  --kana:"Klee One","Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+  --ui:"Zen Kaku Gothic New","Hiragino Sans","Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --papier:#14171f;--feuille:#1c2029;--encre:#e9ebef;--encre-2:#9aa1af;--trait:#2d3240;
+    --ai:#8fa9e0;--ai-doux:#25304a;--rate:#e07a63;--dur:#d6a74e;--bien:#7cc08c;--facile:#8fa9e0;
+    --m1:#3a3626;--m2:#2f3a26;--m3:#334628;--m4:#3b5a2c;--m5:#4b7535;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --papier:#14171f;--feuille:#1c2029;--encre:#e9ebef;--encre-2:#9aa1af;--trait:#2d3240;
+  --ai:#8fa9e0;--ai-doux:#25304a;--rate:#e07a63;--dur:#d6a74e;--bien:#7cc08c;--facile:#8fa9e0;
+  --m1:#3a3626;--m2:#2f3a26;--m3:#334628;--m4:#3b5a2c;--m5:#4b7535;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+html,body{margin:0;background:var(--papier);color:var(--encre)}
+body{
+  font-family:var(--ui);font-size:15px;line-height:1.5;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:calc(72px + env(safe-area-inset-bottom,0px));
+  -webkit-tap-highlight-color:transparent;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--papier);z-index:20}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--ai);outline-offset:2px}
+.page{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* En-tête */
+.tete{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;background:var(--papier);border-bottom:1px solid var(--trait)}
+.tete .page{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.tete h1{margin:0;font-size:17px;font-weight:700;letter-spacing:.02em}
+.tete h1 span{font-family:var(--kana);font-weight:600;color:var(--ai);margin-right:6px}
+.bascule{display:inline-flex;border:1px solid var(--trait);border-radius:8px;background:var(--feuille);padding:2px}
+.bascule button{border:0;background:transparent;padding:6px 12px;border-radius:6px;font-family:var(--kana);font-size:15px;font-weight:600;cursor:pointer;color:var(--encre-2)}
+.bascule button[aria-pressed="true"]{background:var(--ai);color:var(--feuille)}
+
+/* Navigation */
+nav.onglets{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--feuille);border-top:1px solid var(--trait);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+nav.onglets .rang{max-width:720px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+nav.onglets button{border:0;background:transparent;padding:9px 4px 10px;display:flex;flex-direction:column;align-items:center;gap:1px;cursor:pointer;color:var(--encre-2);font-size:12px;font-weight:500}
+nav.onglets button b{font-family:var(--kana);font-size:21px;line-height:1.2;font-weight:600}
+nav.onglets button[aria-current="page"]{color:var(--ai)}
+nav.onglets .pastille{display:inline-block;min-width:18px;padding:0 5px;border-radius:9px;background:var(--rate);color:#fff;font-size:10.5px;line-height:18px;margin-left:3px;font-variant-numeric:tabular-nums}
+
+section.vue{padding-block:16px 24px}
+h2{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--encre-2);margin:24px 0 8px;display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+h2:first-child{margin-top:4px}
+h2 small{font-weight:500;letter-spacing:0;text-transform:none;font-size:12px}
+
+/* Tableau */
+.outils{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.puce{border:1px solid var(--trait);background:var(--feuille);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;color:var(--encre-2)}
+.puce[aria-pressed="true"]{border-color:var(--ai);color:var(--ai);background:var(--ai-doux)}
+.legende-m{display:flex;gap:4px;align-items:center;font-size:11.5px;color:var(--encre-2)}
+.legende-m i{width:14px;height:14px;border-radius:3px;border:1px solid var(--trait);display:block}
+.grille{display:grid;gap:4px}
+.g5{grid-template-columns:22px repeat(5,1fr)}
+.g3{grid-template-columns:22px repeat(3,1fr)}
+.col-tete,.rang-tete{font-size:11px;color:var(--encre-2);display:flex;align-items:center;justify-content:center;font-weight:500}
+.col-tete{padding-bottom:2px}
+.case{
+  position:relative;border:1px solid var(--trait);background:var(--feuille);border-radius:6px;
+  aspect-ratio:1/1.08;max-width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  cursor:pointer;padding:2px;min-width:0;transition:transform .12s ease,border-color .12s ease;
+}
+.case:active{transform:scale(.96)}
+.case .k{font-family:var(--kana);font-size:clamp(22px,7.4vw,36px);line-height:1.05;font-weight:600}
+.g3 .case{aspect-ratio:1.5/1}
+.g3 .case .k{font-size:clamp(22px,6.6vw,32px)}
+.case .r{font-size:11px;color:var(--encre-2);line-height:1.2;margin-top:2px;letter-spacing:.02em}
+.case.vide{border:1px dashed var(--trait);background:transparent;cursor:default}
+.case.vide:active{transform:none}
+.avec-maitrise .case[data-m="1"]{background:var(--m1)}
+.avec-maitrise .case[data-m="2"]{background:var(--m2)}
+.avec-maitrise .case[data-m="3"]{background:var(--m3)}
+.avec-maitrise .case[data-m="4"]{background:var(--m4)}
+.avec-maitrise .case[data-m="5"]{background:var(--m5)}
+.legende-m [data-l="1"]{background:var(--m1)}.legende-m [data-l="2"]{background:var(--m2)}.legende-m [data-l="3"]{background:var(--m3)}.legende-m [data-l="4"]{background:var(--m4)}.legende-m [data-l="5"]{background:var(--m5)}
+.note{font-size:12.5px;color:var(--encre-2);margin:10px 0 0;max-width:62ch}
+
+/* Feuille de détail */
+.voile{position:fixed;inset:0;background:rgba(10,14,24,.38);z-index:40;opacity:0;transition:opacity .18s ease}
+.voile.ouvert{opacity:1}
+.feuille{
+  position:fixed;left:0;right:0;bottom:0;z-index:41;background:var(--feuille);border-radius:16px 16px 0 0;
+  border-top:1px solid var(--trait);max-height:86vh;overflow-y:auto;
+  padding:10px max(18px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px));
+  transform:translateY(100%);transition:transform .22s ease;
+}
+.feuille.ouverte{transform:none}
+.feuille .poignee{width:40px;height:4px;border-radius:2px;background:var(--trait);margin:0 auto 10px}
+.feuille .contenu{max-width:560px;margin:0 auto}
+.fiche-haut{display:flex;align-items:center;gap:18px}
+.fiche-haut .grand{font-family:var(--kana);font-size:96px;line-height:1;font-weight:600;width:116px;height:116px;display:flex;align-items:center;justify-content:center;border:1px solid var(--trait);border-radius:10px;background:
+  linear-gradient(var(--trait),var(--trait)) center/1px 100% no-repeat,
+  linear-gradient(var(--trait),var(--trait)) center/100% 1px no-repeat,var(--papier);flex:none}
+.fiche-haut .infos{min-width:0;display:grid;gap:4px}
+.fiche-haut .romaji{font-size:28px;font-weight:700;letter-spacing:.02em;line-height:1.1}
+.fiche-haut .autre{font-size:13px;color:var(--encre-2)}
+.fiche-haut .autre b{font-family:var(--kana);font-size:22px;color:var(--encre);font-weight:600;margin-left:4px;vertical-align:-2px}
+.bouton{border:1px solid var(--trait);background:var(--papier);border-radius:8px;padding:8px 14px;font-size:14px;cursor:pointer;font-weight:500}
+.bouton.plein{background:var(--ai);border-color:var(--ai);color:var(--feuille)}
+.bouton:disabled{opacity:.45;cursor:default}
+.paires{margin-top:16px;display:grid;gap:8px}
+.paire{border:1px solid var(--trait);border-radius:8px;padding:10px 12px;background:var(--papier)}
+.paire .chars{font-family:var(--kana);font-size:26px;font-weight:600;letter-spacing:.2em;line-height:1.2}
+.paire p{margin:2px 0 0;font-size:13px;color:var(--encre-2)}
+.etats{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.etat{border-top:1px solid var(--trait);padding-top:6px}
+.etat dt{font-size:11.5px;color:var(--encre-2)}
+.etat dd{margin:0;font-size:14px;font-weight:500}
+
+/* Révision */
+.compteurs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.compteur{border:1px solid var(--trait);border-radius:8px;background:var(--feuille);padding:8px 10px}
+.compteur b{display:block;font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;line-height:1.1}
+.compteur span{font-size:11.5px;color:var(--encre-2)}
+.compteur.du b{color:var(--rate)}
+.compteur.neuf b{color:var(--ai)}
+.carte{
+  margin-top:14px;border:1px solid var(--trait);border-radius:14px;background:var(--feuille);
+  padding:18px 16px 16px;display:flex;flex-direction:column;align-items:center;gap:12px;min-height:340px;
+}
+.carte .consigne{font-size:12px;color:var(--encre-2);letter-spacing:.06em;text-transform:uppercase;align-self:stretch;display:flex;justify-content:space-between;gap:8px}
+.carte .consigne .tag{text-transform:none;letter-spacing:0;border-radius:999px;padding:0 8px;background:var(--ai-doux);color:var(--ai);font-size:11.5px}
+.carte .consigne .tag.nouv{background:var(--m1);color:var(--encre)}
+.carte .question{font-family:var(--kana);font-size:min(30vw,128px);line-height:1;font-weight:600;margin:6px 0 2px;text-align:center}
+.carte .question.lat{font-family:var(--ui);font-size:min(16vw,64px);font-weight:700;letter-spacing:.03em;margin:22px 0 10px}
+.saisie{display:flex;gap:8px;width:100%;max-width:320px}
+.saisie input{flex:1;min-width:0;font:inherit;font-size:18px;padding:9px 12px;border:1px solid var(--trait);border-radius:8px;background:var(--papier);color:var(--encre);text-align:center;letter-spacing:.04em}
+.saisie input.juste{border-color:var(--bien);color:var(--bien)}
+.saisie input.faux{border-color:var(--rate);color:var(--rate);text-decoration:line-through}
+.ardoise{width:100%;max-width:300px;aspect-ratio:1/1;border:1px solid var(--trait);border-radius:10px;background:
+  linear-gradient(var(--trait),var(--trait)) center/1px 100% no-repeat,
+  linear-gradient(var(--trait),var(--trait)) center/100% 1px no-repeat,var(--papier);position:relative;touch-action:none}
+.ardoise canvas{position:absolute;inset:0;width:100%;height:100%;border-radius:10px}
+.ardoise .effacer{position:absolute;right:6px;top:6px;border:1px solid var(--trait);background:var(--feuille);border-radius:6px;font-size:12px;padding:3px 8px;cursor:pointer;z-index:2}
+.ardoise .indice{position:absolute;left:8px;bottom:6px;font-size:11px;color:var(--encre-2);pointer-events:none}
+.reponse{display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap}
+.reponse .k{font-family:var(--kana);font-size:56px;font-weight:600;line-height:1}
+.reponse .r{font-size:26px;font-weight:700}
+.reponse .ecart{font-size:13px;color:var(--rate);width:100%;text-align:center}
+.notes{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;width:100%}
+.notes button{border:1px solid var(--trait);background:var(--papier);border-radius:9px;padding:9px 2px 7px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:1px;font-weight:700;font-size:14px}
+.notes button small{font-weight:500;font-size:11px;color:var(--encre-2);font-variant-numeric:tabular-nums}
+.notes button[data-n="0"]{color:var(--rate)}
+.notes button[data-n="1"]{color:var(--dur)}
+.notes button[data-n="2"]{color:var(--bien)}
+.notes button[data-n="3"]{color:var(--facile)}
+.notes button.suggere{border-width:2px;border-color:currentColor}
+.fini{text-align:center;padding:28px 8px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.fini .k{font-family:var(--kana);font-size:64px;color:var(--bien);line-height:1}
+.fini p{margin:0;color:var(--encre-2);max-width:40ch}
+details.reglages{margin-top:18px;border:1px solid var(--trait);border-radius:10px;background:var(--feuille)}
+details.reglages summary{cursor:pointer;padding:11px 14px;font-weight:500;list-style:none;display:flex;justify-content:space-between}
+details.reglages summary::-webkit-details-marker{display:none}
+details.reglages summary::after{content:"＋";color:var(--encre-2)}
+details.reglages[open] summary::after{content:"－"}
+.reglages .corps{padding:0 14px 14px;display:grid;gap:14px}
+.champ{display:grid;gap:6px}
+.champ > span{font-size:12px;color:var(--encre-2)}
+.choix{display:flex;flex-wrap:wrap;gap:6px}
+
+/* Progrès */
+.resume{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.chiffre{border:1px solid var(--trait);border-radius:8px;background:var(--feuille);padding:10px 12px}
+.chiffre b{display:block;font-size:26px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.chiffre span{font-size:12px;color:var(--encre-2)}
+.barre{display:flex;height:14px;border-radius:4px;overflow:hidden;border:1px solid var(--trait);background:var(--feuille)}
+.barre i{display:block;height:100%}
+.barre i[data-l="1"]{background:var(--m1)}.barre i[data-l="2"]{background:var(--m2)}.barre i[data-l="3"]{background:var(--m3)}.barre i[data-l="4"]{background:var(--m4)}.barre i[data-l="5"]{background:var(--m5)}
+table.detail{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+table.detail th,table.detail td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--trait)}
+table.detail th{font-size:11.5px;font-weight:500;color:var(--encre-2)}
+table.detail td.n{text-align:right;white-space:nowrap}
+table.detail .mini{width:96px}
+.niveaux{display:grid;gap:6px;margin-top:6px}
+.niveau{display:grid;grid-template-columns:14px 1fr auto;gap:8px;align-items:center;font-size:13px}
+.niveau i{width:14px;height:14px;border-radius:3px;border:1px solid var(--trait)}
+.niveau i[data-l="1"]{background:var(--m1)}.niveau i[data-l="2"]{background:var(--m2)}.niveau i[data-l="3"]{background:var(--m3)}.niveau i[data-l="4"]{background:var(--m4)}.niveau i[data-l="5"]{background:var(--m5)}
+.niveau b{font-variant-numeric:tabular-nums;font-weight:500}
+.sauvegarde{display:grid;gap:8px}
+.sauvegarde textarea{width:100%;min-height:72px;font:12px/1.4 ui-monospace,Menlo,monospace;padding:8px;border:1px solid var(--trait);border-radius:8px;background:var(--feuille);color:var(--encre);resize:vertical}
+.ligne-boutons{display:flex;flex-wrap:wrap;gap:8px}
+.message{font-size:13px;color:var(--bien);min-height:1.4em;margin:0}
+.message.erreur{color:var(--rate)}
+.confirmation{border:1px solid var(--rate);border-radius:8px;padding:10px 12px;display:grid;gap:8px}
+.confirmation p{margin:0;font-size:13.5px}
+.bouton.danger{border-color:var(--rate);color:var(--rate)}
+.bouton.danger.plein{background:var(--rate);color:#fff}
+
+/* Vocabulaire */
+.bascule.large{display:flex;width:100%;margin-bottom:12px}
+.bascule.large button{flex:1;font-family:var(--ui);font-size:14px;font-weight:500;padding:8px}
+.recherche{width:100%;font:inherit;font-size:16px;padding:9px 12px;border:1px solid var(--trait);border-radius:8px;background:var(--feuille);color:var(--encre)}
+.filtres{display:flex;gap:6px;overflow-x:auto;padding:10px 0 4px;margin:0 -2px;scrollbar-width:none}
+.filtres::-webkit-scrollbar{display:none}
+.filtres .puce{flex:none;white-space:nowrap}
+.vliste{margin-top:6px}
+.vliste h3{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--encre-2);margin:18px 0 2px;display:flex;justify-content:space-between}
+.vliste h3 small{font-weight:500;letter-spacing:0;text-transform:none}
+.mot{display:grid;grid-template-columns:8px minmax(0,1.15fr) minmax(0,1fr);gap:10px;align-items:center;width:100%;text-align:left;border:0;border-bottom:1px solid var(--trait);background:transparent;padding:9px 2px;cursor:pointer}
+.mot .pt{width:8px;height:8px;border-radius:50%;background:var(--trait)}
+.mot .pt[data-m="1"]{background:var(--m1)}.mot .pt[data-m="2"]{background:var(--m2)}.mot .pt[data-m="3"]{background:var(--m3)}.mot .pt[data-m="4"]{background:var(--m4)}.mot .pt[data-m="5"]{background:var(--m5)}
+.mot .jp{min-width:0;display:flex;flex-direction:column}
+.mot .jp b{font-family:var(--kana);font-size:20px;font-weight:600;line-height:1.25;overflow-wrap:anywhere}
+.mot .jp span{font-size:12px;color:var(--encre-2);overflow-wrap:anywhere}
+.mot .jp i{font-style:normal;margin-right:6px;font-family:var(--kana)}
+.mot .fr{font-size:14px;min-width:0;overflow-wrap:anywhere}
+.vide-liste{color:var(--encre-2);font-size:14px;padding:20px 0}
+.carte .question.mot-q{font-size:min(17vw,76px)}
+.carte .question.mot-q.long{font-size:min(11vw,52px)}
+.carte .question.fr-q{font-family:var(--ui);font-size:min(8vw,34px);font-weight:700;letter-spacing:0;margin:30px 0 16px;max-width:22ch;text-align:center}
+.reponse .fr{font-size:20px;font-weight:700;text-align:center;width:100%}
+.reponse .details{font-size:13px;color:var(--encre-2);width:100%;text-align:center}
+.reponse .details b{font-family:var(--kana);font-size:22px;color:var(--encre);font-weight:600;margin:0 4px}
+.reponse .k.long{font-size:36px}
+
+@media (min-width:640px){
+  .case .r{font-size:12px}
+  .resume{grid-template-columns:repeat(4,1fr)}
+}
+@media (prefers-reduced-motion:reduce){
+  .case,.feuille,.voile{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="tete">
+  <div class="page">
+    <h1><span>かな</span>Kana</h1>
+    <div class="bascule" role="group" aria-label="Alphabet">
+      <button type="button" id="b-h" data-s="h" aria-pressed="true">ひらがな</button>
+      <button type="button" id="b-k" data-s="k" aria-pressed="false">カタカナ</button>
+    </div>
+  </div>
+</header>
+
+<main class="page">
+  <section class="vue" id="v-tableau">
+    <div class="outils">
+      <button type="button" class="puce" id="t-maitrise" aria-pressed="false">Colorer selon la maîtrise</button>
+      <div class="legende-m" id="legende-m" hidden>
+        <span>faible</span><i data-l="1"></i><i data-l="2"></i><i data-l="3"></i><i data-l="4"></i><i data-l="5"></i><span>solide</span>
+      </div>
+    </div>
+    <h2>Gojūon <small>46 caractères de base</small></h2>
+    <div class="grille g5" id="g-base"></div>
+    <h2>Dakuten · handakuten <small>゛ voisement · ゜ p</small></h2>
+    <div class="grille g5" id="g-daku"></div>
+    <h2>Yōon <small>combinaisons avec petit ya, yu, yo</small></h2>
+    <div class="grille g3" id="g-yoon"></div>
+    <p class="note">Touchez une case pour l'écouter, voir son équivalent dans l'autre alphabet et les caractères avec lesquels on la confond souvent. ぢ et づ se prononcent comme じ et ず ; を se prononce « o ».</p>
+  </section>
+
+  <section class="vue" id="v-vocab" hidden>
+    <input type="search" class="recherche" id="v-cherche" placeholder="Chercher en français, kana ou rōmaji" aria-label="Chercher un mot" autocomplete="off" autocapitalize="none" spellcheck="false">
+    <div class="filtres" id="v-filtres"></div>
+    <div class="vliste" id="v-liste"></div>
+    <p class="note">Touchez un mot pour l'écouter. Les mots sont en kana, comme vous les lirez au début ; le kanji usuel est indiqué en gris pour plus tard.</p>
+  </section>
+
+  <section class="vue" id="v-revision" hidden>
+    <div class="bascule large" role="group" aria-label="Paquet de cartes" id="paquet">
+      <button type="button" data-p="kana" aria-pressed="true">Kana</button>
+      <button type="button" data-p="vocab" aria-pressed="false">Vocabulaire</button>
+    </div>
+    <div class="compteurs">
+      <div class="compteur du"><b id="c-du">0</b><span>à revoir</span></div>
+      <div class="compteur neuf"><b id="c-neuf">0</b><span>nouvelles aujourd'hui</span></div>
+      <div class="compteur"><b id="c-session">0</b><span>vues cette séance</span></div>
+    </div>
+    <div class="carte" id="carte"></div>
+
+    <details class="reglages" id="reglages">
+      <summary>Réglages des cartes</summary>
+      <div class="corps" id="r-kana">
+        <div class="champ"><span>Alphabets</span>
+          <div class="choix" id="r-script">
+            <button type="button" class="puce" data-v="h">Hiragana</button>
+            <button type="button" class="puce" data-v="k">Katakana</button>
+          </div>
+        </div>
+        <div class="champ"><span>Séries</span>
+          <div class="choix" id="r-sets">
+            <button type="button" class="puce" data-v="base">Gojūon</button>
+            <button type="button" class="puce" data-v="daku">Dakuten</button>
+            <button type="button" class="puce" data-v="yoon">Yōon</button>
+          </div>
+        </div>
+        <div class="champ"><span>Sens des cartes</span>
+          <div class="choix" id="r-sens">
+            <button type="button" class="puce" data-v="l">Lecture : kana → rōmaji</button>
+            <button type="button" class="puce" data-v="e">Écriture : rōmaji → kana</button>
+          </div>
+        </div>
+        <div class="champ"><span>Nouvelles cartes par jour</span>
+          <div class="choix" id="r-neuves">
+            <button type="button" class="puce" data-v="5">5</button>
+            <button type="button" class="puce" data-v="10">10</button>
+            <button type="button" class="puce" data-v="15">15</button>
+            <button type="button" class="puce" data-v="25">25</button>
+          </div>
+        </div>
+      </div>
+      <div class="corps" id="r-vocab" hidden>
+        <div class="champ"><span>Thèmes</span>
+          <div class="choix" id="r-themes"></div>
+        </div>
+        <div class="champ"><span>Sens des cartes</span>
+          <div class="choix" id="r-vsens">
+            <button type="button" class="puce" data-v="l">Lecture : japonais → français</button>
+            <button type="button" class="puce" data-v="e">Rappel : français → japonais</button>
+          </div>
+        </div>
+        <div class="champ"><span>Nouveaux mots par jour</span>
+          <div class="choix" id="r-vneuves">
+            <button type="button" class="puce" data-v="5">5</button>
+            <button type="button" class="puce" data-v="10">10</button>
+            <button type="button" class="puce" data-v="15">15</button>
+            <button type="button" class="puce" data-v="25">25</button>
+          </div>
+        </div>
+      </div>
+    </details>
+    <p class="note">Chaque réponse fixe la prochaine apparition de la carte : quelques minutes si vous la ratez, puis 1 jour, 3 jours, une semaine… Les cartes mal connues reviennent souvent, les acquises de plus en plus rarement mais ne disparaissent jamais.</p>
+  </section>
+
+  <section class="vue" id="v-progres" hidden>
+    <h2>Vue d'ensemble <small id="p-portee"></small></h2>
+    <div class="resume">
+      <div class="chiffre"><b id="p-vues">0</b><span>cartes déjà vues</span></div>
+      <div class="chiffre"><b id="p-acquises">0</b><span>acquises (≥ 3 jours)</span></div>
+      <div class="chiffre"><b id="p-solides">0</b><span>solides (≥ 3 semaines)</span></div>
+      <div class="chiffre"><b id="p-serie">0</b><span>jours d'affilée</span></div>
+    </div>
+    <h2>Répartition</h2>
+    <div class="barre" id="p-barre"></div>
+    <div class="niveaux" id="p-niveaux"></div>
+    <h2>Par série et par thème</h2>
+    <div style="overflow-x:auto"><table class="detail" id="p-table"></table></div>
+    <h2>À surveiller <small>les plus souvent ratées</small></h2>
+    <div id="p-faibles"></div>
+    <h2>Sauvegarde</h2>
+    <div class="sauvegarde">
+      <p class="note" style="margin:0">La progression reste dans ce navigateur. Copiez ce code de temps en temps pour la garder ou la transférer sur un autre appareil.</p>
+      <textarea id="s-code" aria-label="Code de sauvegarde" spellcheck="false"></textarea>
+      <div class="ligne-boutons">
+        <button type="button" class="bouton" id="s-copier">Copier le code</button>
+        <button type="button" class="bouton" id="s-importer">Importer le code collé</button>
+        <button type="button" class="bouton danger" id="s-raz">Tout effacer</button>
+      </div>
+      <div class="confirmation" id="s-confirm" hidden>
+        <p>Effacer toute la progression ? Cette action est définitive.</p>
+        <div class="ligne-boutons">
+          <button type="button" class="bouton danger plein" id="s-oui">Effacer</button>
+          <button type="button" class="bouton" id="s-non">Annuler</button>
+        </div>
+      </div>
+      <p class="message" id="s-msg" role="status"></p>
+    </div>
+  </section>
+</main>
+
+<nav class="onglets" aria-label="Sections">
+  <div class="rang">
+    <button type="button" data-v="tableau" aria-current="page"><b>表</b>Tableau</button>
+    <button type="button" data-v="vocab"><b>語</b>Mots</button>
+    <button type="button" data-v="revision"><b>札</b><span>Réviser<span class="pastille" id="n-du" hidden>0</span></span></button>
+    <button type="button" data-v="progres"><b>歩</b>Progrès</button>
+  </div>
+</nav>
+
+<div class="voile" id="voile" hidden></div>
+<div class="feuille" id="feuille" role="dialog" aria-modal="true" aria-label="Détail du caractère" hidden>
+  <div class="poignee"></div>
+  <div class="contenu" id="fiche"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Données ---------- */
+const VOY = ["a","i","u","e","o"];
+const BASE = [
+  ["", ["a","あ","ア"],["i","い","イ"],["u","う","ウ"],["e","え","エ"],["o","お","オ"]],
+  ["k",["ka","か","カ"],["ki","き","キ"],["ku","く","ク"],["ke","け","ケ"],["ko","こ","コ"]],
+  ["s",["sa","さ","サ"],["shi","し","シ"],["su","す","ス"],["se","せ","セ"],["so","そ","ソ"]],
+  ["t",["ta","た","タ"],["chi","ち","チ"],["tsu","つ","ツ"],["te","て","テ"],["to","と","ト"]],
+  ["n",["na","な","ナ"],["ni","に","ニ"],["nu","ぬ","ヌ"],["ne","ね","ネ"],["no","の","ノ"]],
+  ["h",["ha","は","ハ"],["hi","ひ","ヒ"],["fu","ふ","フ"],["he","へ","ヘ"],["ho","ほ","ホ"]],
+  ["m",["ma","ま","マ"],["mi","み","ミ"],["mu","む","ム"],["me","め","メ"],["mo","も","モ"]],
+  ["y",["ya","や","ヤ"],null,["yu","ゆ","ユ"],null,["yo","よ","ヨ"]],
+  ["r",["ra","ら","ラ"],["ri","り","リ"],["ru","る","ル"],["re","れ","レ"],["ro","ろ","ロ"]],
+  ["w",["wa","わ","ワ"],null,null,null,["wo","を","ヲ"]],
+  ["",["n","ん","ン"],null,null,null,null]
+];
+const DAKU = [
+  ["g",["ga","が","ガ"],["gi","ぎ","ギ"],["gu","ぐ","グ"],["ge","げ","ゲ"],["go","ご","ゴ"]],
+  ["z",["za","ざ","ザ"],["ji","じ","ジ"],["zu","ず","ズ"],["ze","ぜ","ゼ"],["zo","ぞ","ゾ"]],
+  ["d",["da","だ","ダ"],["di","ぢ","ヂ"],["du","づ","ヅ"],["de","で","デ"],["do","ど","ド"]],
+  ["b",["ba","ば","バ"],["bi","び","ビ"],["bu","ぶ","ブ"],["be","べ","ベ"],["bo","ぼ","ボ"]],
+  ["p",["pa","ぱ","パ"],["pi","ぴ","ピ"],["pu","ぷ","プ"],["pe","ぺ","ペ"],["po","ぽ","ポ"]]
+];
+const YOON_SRC = [
+  ["ki","き","キ","ky"],["shi","し","シ","sh"],["chi","ち","チ","ch"],["ni","に","ニ","ny"],
+  ["hi","ひ","ヒ","hy"],["mi","み","ミ","my"],["ri","り","リ","ry"],["gi","ぎ","ギ","gy"],
+  ["ji","じ","ジ","j"],["bi","び","ビ","by"],["pi","ぴ","ピ","py"]
+];
+const YOON = YOON_SRC.map(function(s){
+  const smallH=["ゃ","ゅ","ょ"], smallK=["ャ","ュ","ョ"], v=["a","u","o"];
+  return [s[0]].concat(v.map(function(x,i){return [s[3]+x, s[1]+smallH[i], s[2]+smallK[i]];}));
+});
+
+const AFFICHE = {di:"ji",du:"zu"};
+const VARIANTES = {
+  shi:["si"],chi:["ti"],tsu:["tu"],fu:["hu"],ji:["zi"],di:["ji","dzi"],du:["zu","dzu"],
+  wo:["o"],n:["nn","n'"],sha:["sya"],shu:["syu"],sho:["syo"],cha:["tya","cya"],chu:["tyu","cyu"],cho:["tyo","cyo"],
+  ja:["zya","jya"],ju:["zyu","jyu"],jo:["zyo","jyo"]
+};
+
+const KANA = [];
+const PAR_ID = {};
+function enregistrer(serie, lignes){
+  lignes.forEach(function(l){
+    for(let i=1;i<l.length;i++){
+      const c=l[i]; if(!c) continue;
+      const k={id:c[0],h:c[1],k:c[2],serie:serie,romaji:AFFICHE[c[0]]||c[0]};
+      k.acceptes=[c[0]].concat(VARIANTES[c[0]]||[]);
+      if(AFFICHE[c[0]]) k.acceptes.unshift(AFFICHE[c[0]]);
+      KANA.push(k); PAR_ID[k.id]=k;
+    }
+  });
+}
+enregistrer("base",BASE); enregistrer("daku",DAKU); enregistrer("yoon",YOON);
+const NOM_SERIE = {base:"Gojūon",daku:"Dakuten",yoon:"Yōon"};
+
+/* ---------- Vocabulaire ---------- */
+const VOCAB_BRUT = `
+#Salutations et expressions
+おはようございます||bonjour (le matin)
+こんにちは||bonjour
+こんばんは||bonsoir
+さようなら||au revoir
+おやすみなさい||bonne nuit
+ありがとう||merci
+ありがとうございます||merci (poli)
+すみません||excusez-moi, pardon
+ごめんなさい||désolé
+はい||oui
+いいえ||non
+おねがいします|お願いします|s'il vous plaît
+どうぞ||je vous en prie, tenez
+どうも||merci, salut (familier)
+いただきます||bon appétit (avant de manger)
+ごちそうさまでした|ご馳走様でした|merci pour le repas
+はじめまして|初めまして|enchanté
+よろしくおねがいします|よろしくお願いします|ravi de vous connaître
+いってきます|行ってきます|j'y vais (en partant)
+いってらっしゃい|行ってらっしゃい|à tout à l'heure (à qui part)
+ただいま||je suis rentré
+おかえりなさい|お帰りなさい|bon retour
+おげんきですか|お元気ですか|comment allez-vous ?
+だいじょうぶ|大丈夫|ça va, pas de problème
+そうです||c'est ça
+ちょっと||un peu, un instant
+もしもし||allô
+おめでとうございます||félicitations
+しつれいします|失礼します|excusez-moi (en entrant ou partant)
+わかりました|分かりました|compris
+#Personnes
+わたし|私|je, moi
+ぼく|僕|je (masculin)
+あなた||tu, vous
+かれ|彼|il ; petit ami
+かのじょ|彼女|elle ; petite amie
+わたしたち|私たち|nous
+ひと|人|personne
+おとこ|男|homme
+おんな|女|femme
+おとこのこ|男の子|garçon
+おんなのこ|女の子|fille
+こども|子供|enfant
+おとな|大人|adulte
+ともだち|友達|ami
+せんせい|先生|professeur
+がくせい|学生|étudiant
+いしゃ|医者|médecin
+かいしゃいん|会社員|employé de bureau
+みんな||tout le monde
+だれ|誰|qui
+なまえ|名前|nom
+おきゃくさん|お客さん|client, invité
+けいさつかん|警察官|policier
+てんいん|店員|vendeur
+にほんじん|日本人|Japonais (personne)
+#Famille
+かぞく|家族|famille
+ちち|父|(mon) père
+はは|母|(ma) mère
+おとうさん|お父さん|père
+おかあさん|お母さん|mère
+あに|兄|(mon) grand frère
+あね|姉|(ma) grande sœur
+おとうと|弟|petit frère
+いもうと|妹|petite sœur
+おにいさん|お兄さん|grand frère
+おねえさん|お姉さん|grande sœur
+きょうだい|兄弟|frères et sœurs
+りょうしん|両親|parents
+おっと|夫|(mon) mari
+つま|妻|(ma) femme
+おじいさん||grand-père
+おばあさん||grand-mère
+むすこ|息子|fils
+むすめ|娘|fille (enfant)
+あかちゃん|赤ちゃん|bébé
+#Nombres et quantités
+ゼロ||zéro
+いち|一|un
+に|二|deux
+さん|三|trois
+よん|四|quatre
+ご|五|cinq
+ろく|六|six
+なな|七|sept
+はち|八|huit
+きゅう|九|neuf
+じゅう|十|dix
+ひゃく|百|cent
+せん|千|mille
+まん|万|dix mille
+ひとつ|一つ|un (objet)
+ふたつ|二つ|deux (objets)
+みっつ|三つ|trois (objets)
+よっつ|四つ|quatre (objets)
+いつつ|五つ|cinq (objets)
+むっつ|六つ|six (objets)
+ななつ|七つ|sept (objets)
+とお|十|dix (objets)
+ひとり|一人|une personne, seul
+ふたり|二人|deux personnes
+いくつ||combien (d'objets) ; quel âge
+いくら||combien (prix)
+えん|円|yen
+はんぶん|半分|moitié
+ばんごう|番号|numéro
+かい|回|fois
+さい|歳|ans (âge)
+ぜんぶ|全部|tout, l'ensemble
+すこし|少し|un peu
+たくさん|沢山|beaucoup
+おおぜい|大勢|beaucoup de monde
+#Temps et calendrier
+いま|今|maintenant
+きょう|今日|aujourd'hui
+あした|明日|demain
+きのう|昨日|hier
+あさって||après-demain
+おととい||avant-hier
+あさ|朝|matin
+ひる|昼|midi, journée
+ばん|晩|soir
+よる|夜|nuit
+ごぜん|午前|matin (a.m.)
+ごご|午後|après-midi (p.m.)
+じかん|時間|temps, durée, heure
+とき|時|moment, quand
+ふん|分|minute
+はん|半|et demie
+しゅう|週|semaine
+こんしゅう|今週|cette semaine
+らいしゅう|来週|la semaine prochaine
+せんしゅう|先週|la semaine dernière
+つき|月|mois ; lune
+こんげつ|今月|ce mois-ci
+らいげつ|来月|le mois prochain
+せんげつ|先月|le mois dernier
+とし|年|année
+ことし|今年|cette année
+らいねん|来年|l'année prochaine
+きょねん|去年|l'année dernière
+まいにち|毎日|tous les jours
+まいあさ|毎朝|tous les matins
+まいばん|毎晩|tous les soirs
+げつようび|月曜日|lundi
+かようび|火曜日|mardi
+すいようび|水曜日|mercredi
+もくようび|木曜日|jeudi
+きんようび|金曜日|vendredi
+どようび|土曜日|samedi
+にちようび|日曜日|dimanche
+なんようび|何曜日|quel jour (de la semaine)
+はる|春|printemps
+なつ|夏|été
+あき|秋|automne
+ふゆ|冬|hiver
+やすみ|休み|repos, congé, vacances
+たんじょうび|誕生日|anniversaire
+#Corps et santé
+からだ|体|corps
+あたま|頭|tête
+かお|顔|visage
+め|目|œil
+みみ|耳|oreille
+はな|鼻|nez
+くち|口|bouche
+は|歯|dent
+て|手|main
+あし|足|pied, jambe
+ゆび|指|doigt
+くび|首|cou
+かた|肩|épaule
+おなか|お腹|ventre
+せなか|背中|dos
+かみ|髪|cheveux
+こえ|声|voix
+びょうき|病気|maladie
+くすり|薬|médicament
+かぜ|風邪|rhume
+ねつ|熱|fièvre
+いたい|痛い|avoir mal, douloureux
+げんき|元気|en forme
+けが|怪我|blessure
+びょういん|病院|hôpital
+#Nourriture et boissons
+たべもの|食べ物|nourriture
+のみもの|飲み物|boisson
+ごはん|ご飯|riz cuit ; repas
+あさごはん|朝ご飯|petit-déjeuner
+ひるごはん|昼ご飯|déjeuner
+ばんごはん|晩ご飯|dîner
+みず|水|eau
+おちゃ|お茶|thé
+コーヒー||café
+ぎゅうにゅう|牛乳|lait
+さけ|酒|alcool, saké
+ビール||bière
+パン||pain
+にく|肉|viande
+さかな|魚|poisson
+やさい|野菜|légumes
+くだもの|果物|fruits
+たまご|卵|œuf
+りんご||pomme
+みかん||mandarine
+こめ|米|riz (cru)
+しお|塩|sel
+さとう|砂糖|sucre
+しょうゆ|醤油|sauce soja
+とりにく|鶏肉|poulet
+ぶたにく|豚肉|porc
+ぎゅうにく|牛肉|bœuf
+すし|寿司|sushi
+ラーメン||ramen
+おかし|お菓子|friandises, gâteaux
+りょうり|料理|cuisine, plat
+あじ|味|goût
+はし|箸|baguettes
+さら|皿|assiette
+ちゃわん|茶碗|bol
+コップ||verre
+レストラン||restaurant
+メニュー||menu, carte
+おべんとう|お弁当|bentō, repas à emporter
+みそしる|味噌汁|soupe miso
+#Maison et objets
+いえ|家|maison
+うち|家|chez soi
+へや|部屋|pièce, chambre
+だいどころ|台所|cuisine (pièce)
+トイレ||toilettes
+おふろ|お風呂|bain
+まど|窓|fenêtre
+ドア||porte
+かぎ|鍵|clé
+いす|椅子|chaise
+つくえ|机|bureau (meuble)
+テーブル||table
+ベッド||lit
+テレビ||télévision
+でんわ|電話|téléphone
+けいたい|携帯|téléphone portable
+パソコン||ordinateur
+ほん|本|livre
+かみ|紙|papier
+ペン||stylo
+えんぴつ|鉛筆|crayon
+かばん|鞄|sac
+さいふ|財布|portefeuille
+とけい|時計|montre, horloge
+かさ|傘|parapluie
+ふく|服|vêtements
+くつ|靴|chaussures
+ぼうし|帽子|chapeau
+めがね|眼鏡|lunettes
+しゃしん|写真|photo
+てがみ|手紙|lettre
+でんき|電気|électricité, lumière
+れいぞうこ|冷蔵庫|réfrigérateur
+にもつ|荷物|bagages
+もの|物|chose, objet
+#Lieux et orientation
+ところ|所|endroit
+まち|町|ville, quartier
+くに|国|pays
+にほん|日本|Japon
+フランス||France
+とうきょう|東京|Tokyo
+みせ|店|magasin
+えき|駅|gare
+がっこう|学校|école
+だいがく|大学|université
+かいしゃ|会社|entreprise
+ぎんこう|銀行|banque
+ゆうびんきょく|郵便局|bureau de poste
+こうえん|公園|parc
+としょかん|図書館|bibliothèque
+スーパー||supermarché
+コンビニ||supérette
+ホテル||hôtel
+みち|道|chemin, rue
+はし|橋|pont
+かど|角|coin (de rue)
+いりぐち|入口|entrée
+でぐち|出口|sortie
+うえ|上|dessus, en haut
+した|下|dessous, en bas
+なか|中|dedans, intérieur
+そと|外|dehors, extérieur
+まえ|前|devant ; avant
+うしろ|後ろ|derrière
+みぎ|右|droite
+ひだり|左|gauche
+となり|隣|à côté, voisin
+ちかく|近く|près, les environs
+こうばん|交番|poste de police
+びじゅつかん|美術館|musée d'art
+#Transports et voyage
+でんしゃ|電車|train
+くるま|車|voiture
+バス||bus
+タクシー||taxi
+ちかてつ|地下鉄|métro
+しんかんせん|新幹線|shinkansen (TGV)
+ひこうき|飛行機|avion
+じてんしゃ|自転車|vélo
+ふね|船|bateau
+くうこう|空港|aéroport
+きっぷ|切符|billet
+のりば|乗り場|quai, arrêt
+りょこう|旅行|voyage
+ちず|地図|carte (géographique)
+パスポート||passeport
+がいこく|外国|pays étranger
+きた|北|nord
+みなみ|南|sud
+ひがし|東|est
+にし|西|ouest
+#Nature et météo
+てんき|天気|temps (météo)
+あめ|雨|pluie
+ゆき|雪|neige
+かぜ|風|vent
+そら|空|ciel
+くも|雲|nuage
+ひ|日|soleil ; jour
+たいよう|太陽|soleil
+ほし|星|étoile
+くうき|空気|air
+やま|山|montagne
+かわ|川|rivière
+うみ|海|mer
+みずうみ|湖|lac
+いけ|池|étang
+しま|島|île
+もり|森|forêt
+き|木|arbre
+はな|花|fleur
+いし|石|pierre
+どうぶつ|動物|animal
+いぬ|犬|chien
+ねこ|猫|chat
+とり|鳥|oiseau
+むし|虫|insecte
+#Études et travail
+しごと|仕事|travail
+べんきょう|勉強|études
+しゅくだい|宿題|devoirs
+しけん|試験|examen
+じゅぎょう|授業|cours
+クラス||classe
+もんだい|問題|problème, question
+しつもん|質問|question (posée)
+こたえ|答え|réponse
+いみ|意味|sens, signification
+ことば|言葉|mot ; langue
+ぶん|文|phrase
+じしょ|辞書|dictionnaire
+にほんご|日本語|japonais (langue)
+えいご|英語|anglais
+かんじ|漢字|kanji
+ひらがな||hiragana
+カタカナ||katakana
+かいぎ|会議|réunion
+おかね|お金|argent
+ようじ|用事|chose à faire, course
+じゅうしょ|住所|adresse
+でんわばんごう|電話番号|numéro de téléphone
+しんぶん|新聞|journal
+ニュース||actualités, informations
+#Verbes
+する||faire
+くる|来る|venir
+いく|行く|aller
+かえる|帰る|rentrer
+たべる|食べる|manger
+のむ|飲む|boire
+みる|見る|voir, regarder
+きく|聞く|écouter ; demander
+はなす|話す|parler
+いう|言う|dire
+よむ|読む|lire
+かく|書く|écrire
+かう|買う|acheter
+うる|売る|vendre
+ある||il y a, se trouver (choses)
+いる||il y a, être (êtres vivants)
+わかる|分かる|comprendre
+しる|知る|apprendre (une info) ; しっている : savoir
+おもう|思う|penser
+ねる|寝る|dormir, se coucher
+おきる|起きる|se lever, se réveiller
+はいる|入る|entrer
+でる|出る|sortir
+あう|会う|rencontrer, voir (qqn)
+まつ|待つ|attendre
+もつ|持つ|tenir, avoir sur soi
+つくる|作る|fabriquer, préparer
+つかう|使う|utiliser
+あるく|歩く|marcher
+はしる|走る|courir
+のる|乗る|monter (dans un véhicule)
+おりる|降りる|descendre (d'un véhicule)
+すむ|住む|habiter
+はたらく|働く|travailler
+やすむ|休む|se reposer ; être absent
+あそぶ|遊ぶ|jouer, s'amuser
+およぐ|泳ぐ|nager
+うたう|歌う|chanter
+あける|開ける|ouvrir
+しめる|閉める|fermer
+つける||allumer
+けす|消す|éteindre ; effacer
+とる|取る|prendre
+おく|置く|poser
+あげる||donner (à quelqu'un)
+もらう||recevoir
+くれる||donner (à moi)
+かす|貸す|prêter
+かりる|借りる|emprunter
+おしえる|教える|enseigner ; indiquer
+ならう|習う|apprendre (auprès de qqn)
+おぼえる|覚える|retenir, mémoriser
+わすれる|忘れる|oublier
+はじまる|始まる|commencer
+おわる|終わる|finir
+すわる|座る|s'asseoir
+たつ|立つ|se lever, être debout
+あらう|洗う|laver
+きる|着る|porter (haut du corps)
+はく||porter (pantalon, chaussures)
+あびる|浴びる|prendre (une douche)
+でかける|出かける|sortir (de chez soi)
+まがる|曲がる|tourner
+わたる|渡る|traverser
+なる||devenir
+みせる|見せる|montrer
+よぶ|呼ぶ|appeler
+いれる|入れる|mettre dedans
+だす|出す|sortir (qqch), envoyer
+のぼる|登る|gravir, monter
+すう|吸う|fumer, aspirer
+うまれる|生まれる|naître
+しぬ|死ぬ|mourir
+つかれる|疲れる|se fatiguer
+こまる|困る|être embêté
+#Adjectifs
+おおきい|大きい|grand
+ちいさい|小さい|petit
+ながい|長い|long
+みじかい|短い|court
+たかい|高い|haut ; cher
+やすい|安い|bon marché
+ひくい|低い|bas
+あたらしい|新しい|nouveau, neuf
+ふるい|古い|vieux (objet)
+いい||bon, bien
+わるい|悪い|mauvais
+あつい|暑い|chaud (temps)
+さむい|寒い|froid (temps)
+つめたい|冷たい|froid (au toucher)
+あたたかい|暖かい|doux, tiède
+おいしい||délicieux
+まずい||mauvais (au goût)
+たのしい|楽しい|amusant, agréable
+おもしろい|面白い|intéressant, drôle
+むずかしい|難しい|difficile
+やさしい|優しい|gentil ; (易しい) facile
+いそがしい|忙しい|occupé
+はやい|早い|tôt ; (速い) rapide
+おそい|遅い|tard ; lent
+おおい|多い|nombreux
+すくない|少ない|peu nombreux
+ちかい|近い|proche
+とおい|遠い|loin
+あかい|赤い|rouge
+あおい|青い|bleu
+しろい|白い|blanc
+くろい|黒い|noir
+きれい||beau ; propre
+しずか|静か|calme
+にぎやか||animé
+すき|好き|aimé, que l'on aime
+きらい|嫌い|détesté, que l'on n'aime pas
+じょうず|上手|doué
+ゆうめい|有名|célèbre
+べんり|便利|pratique
+ひろい|広い|large, spacieux
+せまい|狭い|étroit
+おもい|重い|lourd
+かるい|軽い|léger
+かわいい||mignon
+#Mots-outils
+これ||ceci
+それ||cela
+あれ||cela (là-bas)
+どれ||lequel
+ここ||ici
+そこ||là
+あそこ||là-bas
+どこ||où
+なに|何|quoi
+いつ||quand
+どう||comment
+なぜ||pourquoi
+とても||très
+もう||déjà ; encore (un)
+まだ||encore ; pas encore
+よく||souvent ; bien
+いつも||toujours
+ときどき|時々|parfois
+ぜんぜん|全然|pas du tout (avec négation)
+いっしょに|一緒に|ensemble
+`;
+const ROMA = {};
+KANA.forEach(function(k){ ROMA[k.h]=k.romaji; ROMA[k.k]=k.romaji; });
+const SPECIAUX = {"こんにちは":"konnichiwa","こんばんは":"konbanwa"};
+function romaji(t){
+  if(SPECIAUX[t]) return SPECIAUX[t];
+  let out="", dbl=false;
+  for(let i=0;i<t.length;i++){
+    const c=t[i];
+    if(c==="っ"||c==="ッ"){ dbl=true; continue; }
+    if(c==="ー"){ const v=out.match(/[aeiou]$/); if(v) out+=v[0]; continue; }
+    let r=ROMA[t.substr(i,2)];
+    if(r) i++; else r=ROMA[c];
+    if(r==null) r=c;
+    if(dbl){ out+= r.indexOf("ch")===0 ? "t" : r[0]; dbl=false; }
+    out+=r;
+  }
+  return out;
+}
+const THEMES = [], MOTS = [], PAR_MOT = {};
+VOCAB_BRUT.split("\n").forEach(function(l){
+  l=l.trim(); if(!l) return;
+  if(l[0]==="#"){ THEMES.push({nom:l.slice(1),mots:[]}); return; }
+  const p=l.split("|"), th=THEMES.length-1;
+  const m={id:p[0]+(p[1]?"_"+p[1]:""),kana:p[0],kanji:p[1],fr:p[2],theme:th,romaji:romaji(p[0])};
+  THEMES[th].mots.push(m); MOTS.push(m); PAR_MOT[m.id]=m;
+});
+function canon(t){
+  return (t||"").toLowerCase().replace(/[\s\-.']/g,"").replace(/[ōô]/g,"o").replace(/[ūû]/g,"u").replace(/[ēê]/g,"e")
+    .replace(/ou|oo/g,"o").replace(/uu/g,"u").replace(/ee/g,"e").replace(/nn(?![aeiouy])/g,"n");
+}
+function plat(t){ return (t||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+
+const CONFUSIONS = [
+  {c:"あお",n:"お porte un petit trait détaché à droite ; dans あ la boucle traverse la verticale."},
+  {c:"ぬめ",n:"ぬ finit par une petite boucle, め s'arrête net."},
+  {c:"ねれわ",n:"Même départ. ね se termine en boucle, れ par une queue qui remonte, わ par une courbe arrondie."},
+  {c:"るろ",n:"る se ferme par une boucle en bas, ろ reste ouvert."},
+  {c:"さち",n:"Images inversées : さ s'ouvre vers la gauche, ち vers la droite."},
+  {c:"さき",n:"き a deux barres horizontales, さ une seule."},
+  {c:"はほ",n:"ほ a une barre supplémentaire en haut, fermée par le trait vertical."},
+  {c:"けは",n:"け : le trait vertical de droite descend droit ; は se termine en boucle."},
+  {c:"いり",n:"り : le trait de droite est bien plus long et descend sous le premier."},
+  {c:"シツ",n:"シ : deux points à gauche, le dernier trait remonte depuis le bas. ツ : trois traits côte à côte en haut, le dernier descend."},
+  {c:"ソン",n:"ソ : petit trait presque vertical, en haut. ン : petit trait presque horizontal, à gauche ; le grand trait remonte."},
+  {c:"クケタ",n:"ケ : la barre horizontale dépasse de part et d'autre. タ : petit trait oblique à l'intérieur de ク."},
+  {c:"ウワフ",n:"ウ a un petit trait vertical au-dessus. フ n'a pas de jambe à gauche."},
+  {c:"スヌ",n:"ヌ est barrée d'un trait en travers, ス non."},
+  {c:"チテ",n:"チ : premier trait oblique et la verticale traverse la barre. テ : deux barres parallèles."},
+  {c:"コユロ",n:"ユ : la barre du bas dépasse à droite. ロ est fermée sur les quatre côtés."},
+  {c:"アマ",n:"ア finit par une longue courbe verticale ; マ par un petit trait à l'intérieur."},
+  {c:"ルレ",n:"ル a deux traits, レ un seul."},
+  {c:"ノソ",n:"ソ ajoute un petit trait à gauche de ノ."},
+  {c:"へヘ",n:"Pratiquement identiques dans les deux alphabets."},
+  {c:"りリ",n:"Très proches : リ est plus anguleux, ses deux traits sont séparés."},
+  {c:"かカ",n:"カ n'a pas le petit trait détaché de か."},
+  {c:"きキ",n:"キ n'a pas la boucle du bas de き."},
+  {c:"もモ",n:"モ : le dernier trait part vers la droite sans remonter."}
+];
+
+/* ---------- Stockage ---------- */
+const CLE = "kana-etat-v1";
+function charger(){
+  try{ const t=localStorage.getItem(CLE); if(t) return JSON.parse(t); }catch(e){}
+  return null;
+}
+let etat = charger() || {};
+etat.cartes = etat.cartes || {};
+etat.reglages = Object.assign({script:["h"],sets:["base"],sens:["l"],neuves:10,affiche:"h",maitrise:false,vue:"tableau",paquet:"kana",vThemes:[0,1,2],vSens:["l"],vNeuves:10}, etat.reglages||{});
+etat.jours = etat.jours || {};
+function sauver(){ try{ localStorage.setItem(CLE, JSON.stringify(etat)); }catch(e){} }
+
+/* ---------- Répétition espacée ---------- */
+const MIN=60000, JOUR=86400000;
+function aujourdHui(){ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function cle(script,id,sens){ return script+":"+id+":"+sens; }
+function carte(c){ return etat.cartes[c]; }
+
+function planifier(st, note, maintenant){
+  const s = st ? Object.assign({},st) : {ef:2.5,iv:0,rep:0,ratees:0,vues:0};
+  s.vues=(s.vues||0)+1; s.der=maintenant;
+  if(note===0){ s.ratees=(s.ratees||0)+1; }
+  if(s.rep===0){
+    if(note===0){ s.due=maintenant+MIN; }
+    else if(note===1){ s.due=maintenant+5*MIN; }
+    else if(note===2){ s.rep=1; s.due=maintenant+10*MIN; }
+    else { s.rep=2; s.iv=4; s.due=maintenant+4*JOUR; }
+  } else if(s.rep===1){
+    if(note===0){ s.rep=0; s.due=maintenant+MIN; }
+    else if(note===1){ s.due=maintenant+10*MIN; }
+    else if(note===2){ s.rep=2; s.iv=1; s.due=maintenant+JOUR; }
+    else { s.rep=2; s.iv=4; s.due=maintenant+4*JOUR; }
+  } else {
+    if(note===0){ s.rep=1; s.ef=Math.max(1.3,s.ef-0.2); s.iv=Math.max(1,s.iv*0.5); s.due=maintenant+10*MIN; }
+    else if(note===1){ s.ef=Math.max(1.3,s.ef-0.15); s.iv=Math.max(1,s.iv*1.2); s.due=maintenant+s.iv*JOUR; }
+    else if(note===2){ s.iv=Math.max(1,s.iv*s.ef); s.due=maintenant+s.iv*JOUR; }
+    else { s.ef=s.ef+0.15; s.iv=Math.max(2,s.iv*s.ef*1.3); s.due=maintenant+s.iv*JOUR; }
+    if(note>0) s.rep=2;
+  }
+  return s;
+}
+function delaiTexte(ms){
+  if(ms<60*MIN) return Math.max(1,Math.round(ms/MIN))+" min";
+  if(ms<JOUR) return Math.round(ms/(60*MIN))+" h";
+  const j=ms/JOUR;
+  if(j<30) return Math.round(j)+" j";
+  if(j<365) return (Math.round(j/3)/10).toLocaleString("fr-FR")+" mois";
+  return (Math.round(j/36.5)/10).toLocaleString("fr-FR")+" an";
+}
+function niveau(st){
+  if(!st) return 0;
+  if(st.rep<2) return 1;
+  if(st.iv<3) return 2;
+  if(st.iv<10) return 3;
+  if(st.iv<21) return 4;
+  return 5;
+}
+
+function perimetre(paquet){
+  const r=etat.reglages, out=[]; paquet=paquet||r.paquet;
+  if(paquet==="vocab"){
+    r.vThemes.slice().sort(function(a,b){return a-b;}).forEach(function(t){
+      if(!THEMES[t]) return;
+      THEMES[t].mots.forEach(function(m){ r.vSens.forEach(function(d){ out.push({cle:"v:"+m.id+":"+d,mot:m,sens:d,vocab:true}); }); });
+    });
+    return out;
+  }
+  KANA.forEach(function(k){
+    if(r.sets.indexOf(k.serie)<0) return;
+    r.script.forEach(function(s){ r.sens.forEach(function(d){ out.push({cle:cle(s,k.id,d),kana:k,script:s,sens:d}); }); });
+  });
+  return out;
+}
+function nouveauxDuJour(){ const j=etat.jours[aujourdHui()]; if(!j) return 0; return (etat.reglages.paquet==="vocab"?j.nouvV:j.nouv)||0; }
+function limite(){ return etat.reglages.paquet==="vocab"?etat.reglages.vNeuves:etat.reglages.neuves; }
+
+let courante=null, precedente=null, seance=0, libre=false;
+
+function suivante(){
+  const maintenant=Date.now(), p=perimetre();
+  const dues=p.filter(function(x){ const s=carte(x.cle); return s && s.due<=maintenant; });
+  dues.sort(function(a,b){ return carte(a.cle).due-carte(b.cle).due; });
+  let choix=null;
+  const sansPrec=function(l){ if(l.length>1 && precedente) { const f=l.filter(function(x){return x.cle!==precedente;}); return f.length?f:l; } return l; };
+  if(dues.length){ choix=sansPrec(dues)[0]; libre=false; return choix; }
+  if(nouveauxDuJour()<limite()){
+    const neuves=p.filter(function(x){ return !carte(x.cle); });
+    if(neuves.length){ libre=false; return neuves[0]; }
+  }
+  const proches=p.filter(function(x){ const s=carte(x.cle); return s && s.rep<2 && s.due<=maintenant+20*MIN; });
+  proches.sort(function(a,b){ return carte(a.cle).due-carte(b.cle).due; });
+  if(proches.length){ libre=false; return sansPrec(proches)[0]; }
+  return null;
+}
+function choisirLibre(){
+  const p=perimetre().filter(function(x){ return carte(x.cle); });
+  if(!p.length) return null;
+  p.sort(function(a,b){
+    const sa=carte(a.cle), sb=carte(b.cle);
+    const fa=niveau(sa)*10-(sa.ratees||0)*3 + Math.random()*6;
+    const fb=niveau(sb)*10-(sb.ratees||0)*3 + Math.random()*6;
+    return fa-fb;
+  });
+  const l=p.filter(function(x){return x.cle!==precedente;});
+  libre=true; return (l.length?l:p)[0];
+}
+
+/* ---------- Utilitaires ---------- */
+const $=function(s){return document.querySelector(s);};
+function el(tag,attrs,html){ const e=document.createElement(tag); if(attrs) Object.keys(attrs).forEach(function(a){ e.setAttribute(a,attrs[a]); }); if(html!=null) e.innerHTML=html; return e; }
+function car(k,s){ return s==="k"?k.k:k.h; }
+function normaliser(t){ return (t||"").trim().toLowerCase().replace(/[\s\-.]/g,"").replace(/ō/g,"o").replace(/ū/g,"u"); }
+
+let voix=null;
+function trouverVoix(){
+  try{ const v=speechSynthesis.getVoices().filter(function(x){return /^ja/i.test(x.lang);}); voix=v.find(function(x){return /kyoko|otoya|google/i.test(x.name);})||v[0]||null; }catch(e){}
+}
+if("speechSynthesis" in window){ trouverVoix(); try{ speechSynthesis.onvoiceschanged=trouverVoix; }catch(e){} }
+function dire(k){
+  if(!("speechSynthesis" in window)) return;
+  try{
+    speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(typeof k==="string"?k:(k.id==="n"?"ん":k.h));
+    u.lang="ja-JP"; u.rate=0.8; if(voix) u.voice=voix;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+
+/* ---------- Tableau ---------- */
+function niveauCase(k){
+  const r=etat.reglages, scr=r.affiche; let tot=0,n=0;
+  r.sens.forEach(function(d){ tot+=niveau(carte(cle(scr,k.id,d))); n++; });
+  if(!n) return 0;
+  return Math.floor(tot/n + 0.0001);
+}
+function dessinerGrille(id, lignes, cols){
+  const g=document.getElementById(id); g.innerHTML="";
+  g.appendChild(el("div",{class:"col-tete"},""));
+  cols.forEach(function(c){ g.appendChild(el("div",{class:"col-tete"},c)); });
+  const scr=etat.reglages.affiche;
+  lignes.forEach(function(l){
+    g.appendChild(el("div",{class:"rang-tete"},l[0]));
+    for(let i=1;i<l.length;i++){
+      const c=l[i];
+      if(!c){ g.appendChild(el("div",{class:"case vide","aria-hidden":"true"})); continue; }
+      const k=PAR_ID[c[0]];
+      const b=el("button",{type:"button",class:"case","data-id":k.id,"data-m":String(niveauCase(k)),"aria-label":k.romaji},
+        '<span class="k">'+car(k,scr)+'</span><span class="r">'+k.romaji+'</span>');
+      g.appendChild(b);
+    }
+  });
+}
+function dessinerTableau(){
+  dessinerGrille("g-base",BASE,VOY);
+  dessinerGrille("g-daku",DAKU,VOY);
+  dessinerGrille("g-yoon",YOON,["ya","yu","yo"]);
+  const m=etat.reglages.maitrise;
+  $("#v-tableau").classList.toggle("avec-maitrise",m);
+  $("#t-maitrise").setAttribute("aria-pressed",String(m));
+  $("#legende-m").hidden=!m;
+}
+document.querySelector("#v-tableau").addEventListener("click",function(e){
+  const b=e.target.closest(".case[data-id]"); if(!b) return;
+  ouvrirFiche(PAR_ID[b.dataset.id]);
+});
+$("#t-maitrise").addEventListener("click",function(){ etat.reglages.maitrise=!etat.reglages.maitrise; sauver(); dessinerTableau(); });
+
+function libelleEtat(st){
+  if(!st) return "Jamais vue";
+  const n=niveau(st);
+  const lib=["","En apprentissage","Fragile","En cours","Acquise","Solide"][n];
+  const ech=st.due-Date.now();
+  return lib+" · "+(ech<=0?"à revoir":"dans "+delaiTexte(ech));
+}
+function ouvrirFiche(k){
+  const scr=etat.reglages.affiche, autre=scr==="h"?"k":"h";
+  const c=car(k,scr);
+  const groupes=CONFUSIONS.filter(function(g){ return Array.from(g.c).some(function(x){ return c.indexOf(x)>=0 && c.length===1; }); });
+  let html='<div class="fiche-haut"><div class="grand" lang="ja">'+c+'</div><div class="infos">'+
+    '<div class="romaji">'+k.romaji+'</div>'+
+    '<div class="autre">'+(autre==="k"?"Katakana":"Hiragana")+' <b lang="ja">'+car(k,autre)+'</b></div>'+
+    '<div><button type="button" class="bouton" id="f-ecouter">Écouter</button></div></div></div>';
+  if(k.acceptes.length>1){ html+='<p class="note">Transcriptions acceptées : '+Array.from(new Set(k.acceptes)).join(", ")+'</p>'; }
+  if(groupes.length){
+    html+='<h2>Ne pas confondre</h2><div class="paires">';
+    groupes.forEach(function(g){ html+='<div class="paire"><div class="chars" lang="ja">'+Array.from(g.c).join(" ")+'</div><p>'+g.n+'</p></div>'; });
+    html+='</div>';
+  }
+  html+='<h2>Votre progression</h2><dl class="etats">'+
+    '<div class="etat"><dt>Lecture</dt><dd>'+libelleEtat(carte(cle(scr,k.id,"l")))+'</dd></div>'+
+    '<div class="etat"><dt>Écriture</dt><dd>'+libelleEtat(carte(cle(scr,k.id,"e")))+'</dd></div></dl>';
+  $("#fiche").innerHTML=html;
+  $("#f-ecouter").addEventListener("click",function(){ dire(k); });
+  const v=$("#voile"), f=$("#feuille");
+  v.hidden=false; f.hidden=false;
+  requestAnimationFrame(function(){ v.classList.add("ouvert"); f.classList.add("ouverte"); });
+  dire(k);
+}
+function fermerFiche(){
+  const v=$("#voile"), f=$("#feuille");
+  v.classList.remove("ouvert"); f.classList.remove("ouverte");
+  setTimeout(function(){ v.hidden=true; f.hidden=true; },220);
+}
+$("#voile").addEventListener("click",fermerFiche);
+(function(){
+  let y0=null; const f=$("#feuille");
+  f.addEventListener("touchstart",function(e){ if(f.scrollTop<=0) y0=e.touches[0].clientY; else y0=null; },{passive:true});
+  f.addEventListener("touchend",function(e){ if(y0!==null && e.changedTouches[0].clientY-y0>70) fermerFiche(); y0=null; });
+})();
+
+/* ---------- Bascule d'alphabet ---------- */
+document.querySelectorAll(".tete .bascule button").forEach(function(b){
+  b.addEventListener("click",function(){
+    etat.reglages.affiche=b.dataset.s; sauver(); majBascule(); dessinerTableau(); dessinerProgres();
+  });
+});
+function majBascule(){
+  document.querySelectorAll(".tete .bascule button").forEach(function(b){ b.setAttribute("aria-pressed",String(b.dataset.s===etat.reglages.affiche)); });
+}
+
+/* ---------- Révision ---------- */
+let revelee=false, tracer=null;
+function compteurs(){
+  const maintenant=Date.now(), p=perimetre();
+  let du=0; p.forEach(function(x){ const s=carte(x.cle); if(s && s.due<=maintenant) du++; });
+  const reste=Math.max(0,limite()-nouveauxDuJour());
+  const dispo=p.filter(function(x){return !carte(x.cle);}).length;
+  $("#c-du").textContent=du;
+  $("#c-neuf").textContent=Math.min(reste,dispo);
+  $("#c-session").textContent=seance;
+  let total=0; ["kana","vocab"].forEach(function(pq){ perimetre(pq).forEach(function(x){ const s=carte(x.cle); if(s && s.due<=maintenant) total++; }); });
+  const pa=$("#n-du"); pa.textContent=total; pa.hidden=total===0;
+}
+function afficherCarte(){
+  const zone=$("#carte"); revelee=false; compteurs();
+  if(!courante){
+    const p=perimetre(); let prochain=Infinity;
+    p.forEach(function(x){ const s=carte(x.cle); if(s && s.due<prochain) prochain=s.due; });
+    const vides=!p.length;
+    zone.innerHTML='<div class="fini"><div class="k" lang="ja">'+(vides?"？":"済")+'</div>'+
+      '<b>'+(vides?"Aucune carte sélectionnée":"Tout est à jour")+'</b>'+
+      '<p>'+(vides?"Choisissez au moins une série ou un thème dans les réglages.":
+        "Prochaine carte prévue "+(prochain===Infinity?"plus tard":"dans "+delaiTexte(prochain-Date.now()))+". Vous pouvez continuer en entraînement libre : il propose d'abord les cartes les plus fragiles, sans décaler le calendrier des cartes réussies.")+'</p>'+
+      (vides?'':'<button type="button" class="bouton plein" id="libre">Entraînement libre</button>')+'</div>';
+    const b=$("#libre"); if(b) b.addEventListener("click",function(){ courante=choisirLibre(); afficherCarte(); });
+    return;
+  }
+  if(courante.vocab){ afficherMot(); return; }
+  const k=courante.kana, s=courante.script, st=carte(courante.cle);
+  const etiquette = libre?'<span class="tag">libre</span>':(!st?'<span class="tag nouv">nouvelle</span>':'<span class="tag">'+["","apprentissage","fragile","en cours","acquise","solide"][niveau(st)]+'</span>');
+  const nomScr = s==="h"?"Hiragana":"Katakana";
+  let html='<div class="consigne"><span>'+(courante.sens==="l"?nomScr+" → rōmaji":"Écrivez en "+nomScr.toLowerCase())+'</span>'+etiquette+'</div>';
+  if(courante.sens==="l"){
+    html+='<div class="question" lang="ja">'+car(k,s)+'</div>'+
+      '<form class="saisie" id="f-saisie" autocomplete="off"><input id="rep" inputmode="latin" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="rōmaji (facultatif)" aria-label="Votre réponse en rōmaji"><button type="submit" class="bouton plein">Voir</button></form>';
+  } else {
+    html+='<div class="question lat">'+k.romaji+'</div>'+
+      '<div class="ardoise" id="ardoise"><canvas id="toile"></canvas><button type="button" class="effacer" id="effacer">Effacer</button><span class="indice">tracez ici du doigt</span></div>'+
+      '<button type="button" class="bouton plein" id="voir">Voir la réponse</button>';
+  }
+  html+='<div id="apres" hidden></div>';
+  zone.innerHTML=html;
+  if(courante.sens==="l"){
+    $("#f-saisie").addEventListener("submit",function(e){ e.preventDefault(); reveler(); });
+  } else {
+    $("#voir").addEventListener("click",reveler);
+    armerArdoise();
+  }
+}
+function etiquetteDe(st){
+  return libre?'<span class="tag">libre</span>':(!st?'<span class="tag nouv">nouvelle</span>':'<span class="tag">'+["","apprentissage","fragile","en cours","acquise","solide"][niveau(st)]+'</span>');
+}
+function boutonsNotes(st,maintenant,suggestion){
+  let html='<div class="notes" style="margin-top:12px">';
+  ["À revoir","Difficile","Bien","Facile"].forEach(function(l,i){
+    const d = libre ? (i===0?"bientôt":"inchangé") : delaiTexte(planifier(st,i,maintenant).due-maintenant);
+    html+='<button type="button" data-n="'+i+'"'+(suggestion===i?' class="suggere"':'')+'>'+l+'<small>'+d+'</small></button>';
+  });
+  return html+'</div>';
+}
+function afficherMot(){
+  const zone=$("#carte"), m=courante.mot, st=carte(courante.cle);
+  let html='<div class="consigne"><span>'+THEMES[m.theme].nom+'</span>'+etiquetteDe(st)+'</div>';
+  if(courante.sens==="l"){
+    html+='<div class="question mot-q'+(m.kana.length>5?" long":"")+'" lang="ja">'+m.kana+'</div>'+
+      '<div class="ligne-boutons"><button type="button" class="bouton" id="q-ecouter">Écouter</button><button type="button" class="bouton plein" id="voir">Voir la traduction</button></div>';
+  } else {
+    html+='<div class="question fr-q">'+m.fr+'</div>'+
+      '<form class="saisie" id="f-saisie" autocomplete="off"><input id="rep" inputmode="latin" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="en rōmaji (facultatif)" aria-label="Votre réponse en rōmaji"><button type="submit" class="bouton plein">Voir</button></form>';
+  }
+  html+='<div id="apres" hidden></div>';
+  zone.innerHTML=html;
+  if(courante.sens==="l"){
+    $("#voir").addEventListener("click",reveler);
+    $("#q-ecouter").addEventListener("click",function(){ dire(m.kana); });
+  } else {
+    $("#f-saisie").addEventListener("submit",function(e){ e.preventDefault(); reveler(); });
+  }
+}
+function revelerMot(){
+  const m=courante.mot, maintenant=Date.now(), st=carte(courante.cle);
+  let suggestion=null;
+  if(courante.sens==="e"){
+    const inp=$("#rep"), t=canon(inp.value); inp.readOnly=true;
+    if(t){ const ok=t===canon(m.romaji); inp.classList.add(ok?"juste":"faux"); suggestion=ok?2:0; }
+    const b=document.querySelector("#f-saisie button"); if(b) b.disabled=true;
+  } else {
+    $("#voir").parentNode.hidden=true;
+  }
+  const a=$("#apres"); a.hidden=false;
+  let html='<div class="reponse">'+(courante.sens==="e"?'<span class="k'+(m.kana.length>5?" long":"")+'" lang="ja">'+m.kana+'</span>':'<span class="fr">'+m.fr+'</span>')+
+    '<span class="details">'+m.romaji+(m.kanji?' · kanji <b lang="ja">'+m.kanji+'</b>':'')+'</span>'+
+    '<button type="button" class="bouton" id="ecouter">Écouter</button></div>';
+  html+=boutonsNotes(st,maintenant,suggestion);
+  a.innerHTML=html;
+  a.querySelectorAll(".notes button").forEach(function(b){ b.addEventListener("click",function(){ noter(+b.dataset.n); }); });
+  $("#ecouter").addEventListener("click",function(){ dire(m.kana); });
+  dire(m.kana);
+}
+function armerArdoise(){
+  const cv=$("#toile"), box=$("#ardoise"), r=box.getBoundingClientRect(), dpr=window.devicePixelRatio||1;
+  cv.width=r.width*dpr; cv.height=r.height*dpr;
+  const cx=cv.getContext("2d"); cx.scale(dpr,dpr);
+  cx.lineCap="round"; cx.lineJoin="round"; cx.lineWidth=Math.max(6,r.width/34);
+  cx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue("--encre").trim()||"#1c2130";
+  let actif=false;
+  function pt(e){ const b=cv.getBoundingClientRect(); return [e.clientX-b.left,e.clientY-b.top]; }
+  cv.addEventListener("pointerdown",function(e){ actif=true; cv.setPointerCapture(e.pointerId); const p=pt(e); cx.beginPath(); cx.moveTo(p[0],p[1]); cx.lineTo(p[0]+.1,p[1]+.1); cx.stroke(); });
+  cv.addEventListener("pointermove",function(e){ if(!actif) return; const p=pt(e); cx.lineTo(p[0],p[1]); cx.stroke(); });
+  ["pointerup","pointercancel"].forEach(function(t){ cv.addEventListener(t,function(){ actif=false; }); });
+  $("#effacer").addEventListener("click",function(){ cx.clearRect(0,0,cv.width,cv.height); });
+}
+function reveler(){
+  if(revelee||!courante) return; revelee=true;
+  if(courante.vocab){ revelerMot(); return; }
+  const k=courante.kana, s=courante.script, maintenant=Date.now(), st=carte(courante.cle);
+  let suggestion=null, ecart="";
+  if(courante.sens==="l"){
+    const inp=$("#rep"), t=normaliser(inp.value);
+    inp.readOnly=true;
+    if(t){
+      const ok=k.acceptes.indexOf(t)>=0;
+      inp.classList.add(ok?"juste":"faux"); suggestion=ok?2:0;
+      if(!ok){
+        const autre=KANA.find(function(x){ return x.acceptes.indexOf(t)>=0; });
+        ecart = autre ? "Vous avez répondu "+t+", c'est-à-dire "+car(autre,s)+"." : "";
+      }
+    }
+    const btn=document.querySelector("#f-saisie button"); if(btn) btn.disabled=true;
+  } else {
+    $("#voir").hidden=true;
+  }
+  const a=$("#apres"); a.hidden=false;
+  let html='<div class="reponse"><span class="k" lang="ja">'+car(k,s)+'</span><span class="r">'+k.romaji+'</span>'+
+    '<button type="button" class="bouton" id="ecouter">Écouter</button>'+(ecart?'<span class="ecart">'+ecart+'</span>':'')+'</div>';
+  html+=boutonsNotes(st,maintenant,suggestion);
+  a.innerHTML=html;
+  a.querySelectorAll(".notes button").forEach(function(b){ b.addEventListener("click",function(){ noter(+b.dataset.n); }); });
+  $("#ecouter").addEventListener("click",function(){ dire(k); });
+  dire(k);
+}
+function noter(n){
+  if(!courante) return;
+  const maintenant=Date.now(), st=carte(courante.cle), jour=aujourdHui();
+  etat.jours[jour]=etat.jours[jour]||{nouv:0,rev:0};
+  if(libre){
+    if(n===0){ etat.cartes[courante.cle]=planifier(st,0,maintenant); }
+    else if(st){ st.vues=(st.vues||0)+1; st.der=maintenant; }
+  } else {
+    if(!st){ if(courante.vocab) etat.jours[jour].nouvV=(etat.jours[jour].nouvV||0)+1; else etat.jours[jour].nouv++; }
+    etat.cartes[courante.cle]=planifier(st,n,maintenant);
+  }
+  etat.jours[jour].rev++;
+  sauver(); seance++;
+  precedente=courante.cle;
+  const etaitLibre=libre;
+  courante=suivante();
+  if(!courante && etaitLibre) courante=choisirLibre();
+  afficherCarte();
+}
+document.addEventListener("keydown",function(e){
+  if($("#v-revision").hidden) return;
+  if(e.target && e.target.tagName==="INPUT" && !revelee) return;
+  if(revelee && /^[1-4]$/.test(e.key)){ noter(+e.key-1); e.preventDefault(); }
+  else if(!revelee && (e.key===" "||e.key==="Enter") && courante && (courante.vocab ? courante.sens==="l" : courante.sens==="e")){ reveler(); e.preventDefault(); }
+});
+
+/* Réglages */
+function majReglages(){
+  const r=etat.reglages;
+  [["#r-script","script"],["#r-sets","sets"],["#r-sens","sens"]].forEach(function(p){
+    document.querySelectorAll(p[0]+" .puce").forEach(function(b){ b.setAttribute("aria-pressed",String(r[p[1]].indexOf(b.dataset.v)>=0)); });
+  });
+  document.querySelectorAll("#r-neuves .puce").forEach(function(b){ b.setAttribute("aria-pressed",String(+b.dataset.v===r.neuves)); });
+  document.querySelectorAll("#r-vsens .puce").forEach(function(b){ b.setAttribute("aria-pressed",String(r.vSens.indexOf(b.dataset.v)>=0)); });
+  document.querySelectorAll("#r-vneuves .puce").forEach(function(b){ b.setAttribute("aria-pressed",String(+b.dataset.v===r.vNeuves)); });
+  document.querySelectorAll("#r-themes .puce").forEach(function(b){ b.setAttribute("aria-pressed",String(r.vThemes.indexOf(+b.dataset.v)>=0)); });
+  document.querySelectorAll("#paquet button").forEach(function(b){ b.setAttribute("aria-pressed",String(b.dataset.p===r.paquet)); });
+  $("#r-kana").hidden=r.paquet==="vocab"; $("#r-vocab").hidden=r.paquet!=="vocab";
+}
+(function(){
+  const z=$("#r-themes");
+  THEMES.forEach(function(t,i){ z.appendChild(el("button",{type:"button",class:"puce","data-v":String(i)},t.nom+" · "+t.mots.length)); });
+})();
+function apresReglage(){ sauver(); majReglages(); precedente=null; courante=suivante(); afficherCarte(); dessinerProgres(); }
+document.querySelectorAll("#paquet button").forEach(function(b){
+  b.addEventListener("click",function(){ etat.reglages.paquet=b.dataset.p; apresReglage(); });
+});
+document.querySelectorAll("#r-themes .puce").forEach(function(b){
+  b.addEventListener("click",function(){
+    const l=etat.reglages.vThemes, v=+b.dataset.v, i=l.indexOf(v);
+    if(i>=0){ if(l.length>1) l.splice(i,1); } else l.push(v);
+    apresReglage();
+  });
+});
+document.querySelectorAll("#r-vsens .puce").forEach(function(b){
+  b.addEventListener("click",function(){
+    const l=etat.reglages.vSens, i=l.indexOf(b.dataset.v);
+    if(i>=0){ if(l.length>1) l.splice(i,1); } else l.push(b.dataset.v);
+    apresReglage();
+  });
+});
+document.querySelectorAll("#r-vneuves .puce").forEach(function(b){
+  b.addEventListener("click",function(){ etat.reglages.vNeuves=+b.dataset.v; sauver(); majReglages(); if(!courante||libre){ courante=suivante()||courante; } afficherCarte(); });
+});
+[["#r-script","script"],["#r-sets","sets"],["#r-sens","sens"]].forEach(function(p){
+  document.querySelectorAll(p[0]+" .puce").forEach(function(b){
+    b.addEventListener("click",function(){
+      const l=etat.reglages[p[1]], i=l.indexOf(b.dataset.v);
+      if(i>=0){ if(l.length>1) l.splice(i,1); } else l.push(b.dataset.v);
+      sauver(); majReglages(); courante=suivante(); afficherCarte(); dessinerTableau(); dessinerProgres();
+    });
+  });
+});
+document.querySelectorAll("#r-neuves .puce").forEach(function(b){
+  b.addEventListener("click",function(){ etat.reglages.neuves=+b.dataset.v; sauver(); majReglages(); if(!courante||libre){ courante=suivante()||courante; } afficherCarte(); });
+});
+
+/* ---------- Progrès ---------- */
+function serie(){
+  let n=0; const d=new Date();
+  for(;;){
+    const k=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+    if(etat.jours[k] && etat.jours[k].rev>0){ n++; d.setDate(d.getDate()-1); }
+    else if(n===0 && k===aujourdHui()){ d.setDate(d.getDate()-1); }
+    else break;
+  }
+  return n;
+}
+function dessinerProgres(){
+  const p=perimetre(), compte=[0,0,0,0,0,0];
+  p.forEach(function(x){ compte[niveau(carte(x.cle))]++; });
+  const tot=p.length||1;
+  $("#p-portee").textContent=(etat.reglages.paquet==="vocab"?"Vocabulaire":"Kana")+" · "+p.length+" cartes sélectionnées";
+  $("#p-vues").textContent=p.length-compte[0];
+  $("#p-acquises").textContent=compte[3]+compte[4]+compte[5];
+  $("#p-solides").textContent=compte[5];
+  $("#p-serie").textContent=serie();
+  const barre=$("#p-barre"); barre.innerHTML="";
+  for(let l=1;l<=5;l++){ if(compte[l]) { const i=el("i",{"data-l":String(l)}); i.style.width=(compte[l]/tot*100)+"%"; barre.appendChild(i);} }
+  const noms=["Jamais vues","En apprentissage","Fragiles (< 3 j)","En cours (< 10 j)","Acquises (< 3 sem.)","Solides (≥ 3 sem.)"];
+  const nv=$("#p-niveaux"); nv.innerHTML="";
+  for(let l=0;l<=5;l++){ nv.appendChild(el("div",{class:"niveau"},'<i data-l="'+l+'"></i><span>'+noms[l]+'</span><b>'+compte[l]+'</b>')); }
+
+  let t='<thead><tr><th>Série ou thème</th><th>Paquet</th><th class="mini">Maîtrise</th><th class="n">Vues</th></tr></thead><tbody>';
+  ["base","daku","yoon"].forEach(function(se){
+    ["h","k"].forEach(function(s){
+      const ks=KANA.filter(function(k){return k.serie===se;});
+      let vues=0, somme=0, n=0;
+      ks.forEach(function(k){ ["l","e"].forEach(function(d){ const st=carte(cle(s,k.id,d)); if(st) vues++; somme+=niveau(st); n++; }); });
+      const pct=Math.round(somme/(n*5)*100);
+      t+='<tr><td>'+NOM_SERIE[se]+'</td><td>'+(s==="h"?"Hiragana":"Katakana")+'</td><td class="mini"><div class="barre" style="height:10px"><i data-l="4" style="width:'+pct+'%"></i></div></td><td class="n">'+vues+' / '+n+'</td></tr>';
+    });
+  });
+  THEMES.forEach(function(th){
+    let vues=0, somme=0, n=0;
+    th.mots.forEach(function(m){ ["l","e"].forEach(function(d){ const st=carte("v:"+m.id+":"+d); if(st) vues++; somme+=niveau(st); n++; }); });
+    const pct=Math.round(somme/(n*5)*100);
+    t+='<tr><td>'+th.nom+'</td><td>Mots</td><td class="mini"><div class="barre" style="height:10px"><i data-l="4" style="width:'+pct+'%"></i></div></td><td class="n">'+vues+' / '+n+'</td></tr>';
+  });
+  $("#p-table").innerHTML=t+'</tbody>';
+
+  const faibles=Object.keys(etat.cartes).map(function(c){ return [c,etat.cartes[c]]; })
+    .filter(function(x){ return (x[1].ratees||0)>0; })
+    .sort(function(a,b){ return (b[1].ratees/b[1].vues)-(a[1].ratees/a[1].vues) || b[1].ratees-a[1].ratees; }).slice(0,10);
+  const zf=$("#p-faibles");
+  if(!faibles.length){ zf.innerHTML='<p class="note" style="margin:0">Rien à signaler pour l\'instant.</p>'; }
+  else {
+    let h='<table class="detail"><thead><tr><th>Carte</th><th>Sens</th><th class="n">Ratées</th></tr></thead><tbody>';
+    faibles.forEach(function(x){
+      const part=x[0].split(":");
+      if(part[0]==="v"){ const m=PAR_MOT[part[1]]; if(!m) return;
+        h+='<tr><td><span lang="ja" style="font-family:var(--kana);font-size:18px;font-weight:600">'+m.kana+'</span> '+m.fr+'</td><td>'+(part[2]==="l"?"lecture":"rappel")+'</td><td class="n">'+x[1].ratees+' / '+x[1].vues+'</td></tr>';
+        return; }
+      const k=PAR_ID[part[1]]; if(!k) return;
+      h+='<tr><td><span lang="ja" style="font-family:var(--kana);font-size:22px;font-weight:600">'+car(k,part[0])+'</span> '+k.romaji+'</td><td>'+(part[2]==="l"?"lecture":"écriture")+'</td><td class="n">'+x[1].ratees+' / '+x[1].vues+'</td></tr>';
+    });
+    zf.innerHTML=h+'</tbody></table>';
+  }
+  try{ $("#s-code").value=btoa(unescape(encodeURIComponent(JSON.stringify({c:etat.cartes,j:etat.jours,r:etat.reglages})))); }catch(e){ $("#s-code").value=""; }
+}
+function message(t,err){ const m=$("#s-msg"); m.textContent=t; m.classList.toggle("erreur",!!err); }
+$("#s-copier").addEventListener("click",function(){
+  const v=$("#s-code").value;
+  try{
+    navigator.clipboard.writeText(v).then(function(){ message("Code copié."); },function(){ $("#s-code").select(); message("Code sélectionné : copiez-le manuellement."); });
+  }catch(e){ $("#s-code").select(); message("Code sélectionné : copiez-le manuellement."); }
+});
+$("#s-importer").addEventListener("click",function(){
+  try{
+    const o=JSON.parse(decodeURIComponent(escape(atob($("#s-code").value.trim()))));
+    if(!o || typeof o.c!=="object") throw 0;
+    etat.cartes=o.c; etat.jours=o.j||{}; if(o.r) etat.reglages=Object.assign(etat.reglages,o.r);
+    sauver(); toutRedessiner(); message("Progression importée.");
+  }catch(e){ message("Ce code n'est pas valide. Collez le code complet copié depuis l'application.",true); }
+});
+$("#s-raz").addEventListener("click",function(){ $("#s-confirm").hidden=false; });
+$("#s-non").addEventListener("click",function(){ $("#s-confirm").hidden=true; });
+$("#s-oui").addEventListener("click",function(){
+  etat.cartes={}; etat.jours={}; sauver(); $("#s-confirm").hidden=true; toutRedessiner(); message("Progression effacée.");
+});
+
+/* ---------- Liste de vocabulaire ---------- */
+let filtreTheme=-1;
+function niveauMot(m){
+  let tot=0,n=0; ["l","e"].forEach(function(d){ const st=carte("v:"+m.id+":"+d); if(st){ tot+=niveau(st); n++; } });
+  return n?Math.floor(tot/n+0.0001):0;
+}
+function dessinerVocab(){
+  const f=$("#v-filtres");
+  if(!f.childElementCount){
+    f.appendChild(el("button",{type:"button",class:"puce","data-t":"-1"},"Tous · "+MOTS.length));
+    THEMES.forEach(function(t,i){ f.appendChild(el("button",{type:"button",class:"puce","data-t":String(i)},t.nom)); });
+  }
+  f.querySelectorAll(".puce").forEach(function(b){ b.setAttribute("aria-pressed",String(+b.dataset.t===filtreTheme)); });
+  const q=$("#v-cherche").value.trim(), qp=plat(q), qc=canon(q);
+  const liste=$("#v-liste"); let html="", total=0;
+  THEMES.forEach(function(th,i){
+    if(filtreTheme>=0 && filtreTheme!==i) return;
+    const ms=th.mots.filter(function(m){
+      if(!q) return true;
+      return plat(m.fr).indexOf(qp)>=0 || m.kana.indexOf(q)>=0 || (m.kanji && m.kanji.indexOf(q)>=0) || (qc && canon(m.romaji).indexOf(qc)>=0);
+    });
+    if(!ms.length) return;
+    total+=ms.length;
+    html+='<h3>'+th.nom+'<small>'+ms.length+'</small></h3>';
+    ms.forEach(function(m){
+      html+='<button type="button" class="mot" data-id="'+m.id+'"><span class="pt" data-m="'+niveauMot(m)+'"></span>'+
+        '<span class="jp"><b lang="ja">'+m.kana+'</b><span>'+(m.kanji?'<i lang="ja">'+m.kanji+'</i>':'')+m.romaji+'</span></span>'+
+        '<span class="fr">'+m.fr+'</span></button>';
+    });
+  });
+  liste.innerHTML = total ? html : '<p class="vide-liste">Aucun mot ne correspond à « '+q.replace(/</g,"&lt;")+' ».</p>';
+}
+$("#v-cherche").addEventListener("input",dessinerVocab);
+$("#v-filtres").addEventListener("click",function(e){ const b=e.target.closest(".puce"); if(!b) return; filtreTheme=+b.dataset.t; dessinerVocab(); });
+$("#v-liste").addEventListener("click",function(e){ const b=e.target.closest(".mot"); if(!b) return; const m=PAR_MOT[b.dataset.id]; if(m) dire(m.kana); });
+
+/* ---------- Navigation ---------- */
+function montrer(v){
+  etat.reglages.vue=v; sauver();
+  ["tableau","vocab","revision","progres"].forEach(function(n){ $("#v-"+n).hidden=n!==v; });
+  document.querySelectorAll("nav.onglets button").forEach(function(b){ if(b.dataset.v===v) b.setAttribute("aria-current","page"); else b.removeAttribute("aria-current"); });
+  document.querySelector(".tete .bascule").style.visibility = (v==="tableau"||v==="progres")?"visible":"hidden";
+  if(v==="vocab") dessinerVocab();
+  if(v==="tableau") dessinerTableau();
+  if(v==="progres") dessinerProgres();
+  if(v==="revision"){ if(!courante){ courante=suivante(); } afficherCarte(); }
+  window.scrollTo(0,0);
+}
+document.querySelectorAll("nav.onglets button").forEach(function(b){ b.addEventListener("click",function(){ montrer(b.dataset.v); }); });
+document.addEventListener("visibilitychange",function(){ if(!document.hidden){ compteurs(); if(!$("#v-revision").hidden && !revelee){ const c=suivante(); if(c && (!courante||libre)){ courante=c; afficherCarte(); } } } });
+
+function toutRedessiner(){ majBascule(); majReglages(); dessinerTableau(); dessinerProgres(); courante=suivante(); if(!$("#v-revision").hidden) afficherCarte(); else compteurs(); }
+
+majBascule(); majReglages(); dessinerTableau(); compteurs();
+montrer(etat.reglages.vue||"tableau");
+})();
+</script>
+</body>
+</html>
