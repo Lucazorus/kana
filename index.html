@@ -248,7 +248,7 @@ table.detail .mini{width:96px}
 .mot .jp{min-width:0;display:flex;flex-direction:column}
 .mot .jp b{font-family:var(--kana);font-size:20px;font-weight:600;line-height:1.25;overflow-wrap:anywhere}
 .mot .jp span{font-size:12px;color:var(--encre-2);overflow-wrap:anywhere}
-.mot .jp i{font-style:normal;margin-right:6px;font-family:var(--kana)}
+.mot .jp i{font-style:normal;margin-right:6px;font-family:var(--kana);font-size:14px}
 .mot .fr{font-size:14px;min-width:0;overflow-wrap:anywhere}
 .vide-liste{color:var(--encre-2);font-size:14px;padding:20px 0}
 .carte .question.mot-q{font-size:min(17vw,76px)}
@@ -256,7 +256,9 @@ table.detail .mini{width:96px}
 .carte .question.fr-q{font-family:var(--ui);font-size:min(8vw,34px);font-weight:700;letter-spacing:0;margin:30px 0 16px;max-width:22ch;text-align:center}
 .reponse .fr{font-size:20px;font-weight:700;text-align:center;width:100%}
 .reponse .details{font-size:13px;color:var(--encre-2);width:100%;text-align:center}
-.reponse .details b{font-family:var(--kana);font-size:22px;color:var(--encre);font-weight:600;margin:0 4px}
+.carte .lecture-q{font-family:var(--kana);font-size:min(7vw,28px);font-weight:600;color:var(--encre-2);line-height:1.2;margin-top:-8px;text-align:center}
+.reponse .ecrit{display:flex;flex-direction:column;align-items:center;gap:6px}
+.reponse .ecrit .lect{font-family:var(--kana);font-size:22px;font-weight:600;color:var(--encre-2);line-height:1.2}
 .reponse .k.long{font-size:36px}
 
 @media (min-width:640px){
@@ -301,7 +303,7 @@ table.detail .mini{width:96px}
     <input type="search" class="recherche" id="v-cherche" placeholder="Chercher en français, kana ou rōmaji" aria-label="Chercher un mot" autocomplete="off" autocapitalize="none" spellcheck="false">
     <div class="filtres" id="v-filtres"></div>
     <div class="vliste" id="v-liste"></div>
-    <p class="note">Touchez un mot pour l'écouter. Les mots sont en kana, comme vous les lirez au début ; le kanji usuel est indiqué en gris pour plus tard.</p>
+    <p class="note">Touchez un mot pour l'écouter. Les mots qui s'écrivent en kanji sont affichés en kanji, avec leur lecture en hiragana en dessous.</p>
   </section>
 
   <section class="vue" id="v-revision" hidden>
@@ -1341,7 +1343,9 @@ function afficherMot(){
   const zone=$("#carte"), m=courante.mot, st=carte(courante.cle);
   let html='<div class="consigne"><span>'+THEMES[m.theme].nom+'</span>'+etiquetteDe(st)+'</div>';
   if(courante.sens==="l"){
-    html+='<div class="question mot-q'+(m.kana.length>5?" long":"")+'" lang="ja">'+m.kana+'</div>'+
+    const ecrit=m.kanji||m.kana;
+    html+='<div class="question mot-q'+(ecrit.length>5?" long":"")+'" lang="ja">'+ecrit+'</div>'+
+      (m.kanji?'<div class="lecture-q" lang="ja">'+m.kana+'</div>':'')+
       '<div class="ligne-boutons"><button type="button" class="bouton" id="q-ecouter">Écouter</button><button type="button" class="bouton plein" id="voir">Voir la traduction</button></div>';
   } else {
     html+='<div class="question fr-q">'+m.fr+'</div>'+
@@ -1367,8 +1371,9 @@ function revelerMot(){
     $("#voir").parentNode.hidden=true;
   }
   const a=$("#apres"); a.hidden=false;
-  let html='<div class="reponse">'+(courante.sens==="e"?'<span class="k'+(m.kana.length>5?" long":"")+'" lang="ja">'+m.kana+'</span>':'<span class="fr">'+m.fr+'</span>')+
-    '<span class="details">'+m.romaji+(m.kanji?' · kanji <b lang="ja">'+m.kanji+'</b>':'')+'</span>'+
+  const ecrit=m.kanji||m.kana;
+  let html='<div class="reponse">'+(courante.sens==="e"?'<span class="ecrit"><span class="k'+(ecrit.length>5?" long":"")+'" lang="ja">'+ecrit+'</span>'+(m.kanji?'<span class="lect" lang="ja">'+m.kana+'</span>':'')+'</span>':'<span class="fr">'+m.fr+'</span>')+
+    '<span class="details">'+m.romaji+'</span>'+
     '<button type="button" class="bouton" id="ecouter">Écouter</button></div>';
   html+=boutonsNotes(st,maintenant,suggestion);
   a.innerHTML=html;
@@ -1549,7 +1554,7 @@ function dessinerProgres(){
     faibles.forEach(function(x){
       const part=x[0].split(":");
       if(part[0]==="v"){ const m=PAR_MOT[part[1]]; if(!m) return;
-        h+='<tr><td><span lang="ja" style="font-family:var(--kana);font-size:18px;font-weight:600">'+m.kana+'</span> '+m.fr+'</td><td>'+(part[2]==="l"?"lecture":"rappel")+'</td><td class="n">'+x[1].ratees+' / '+x[1].vues+'</td></tr>';
+        h+='<tr><td><span lang="ja" style="font-family:var(--kana);font-size:18px;font-weight:600">'+(m.kanji||m.kana)+'</span> '+m.fr+(m.kanji?'<br><span lang="ja" style="font-family:var(--kana);font-size:13px;color:var(--encre-2)">'+m.kana+'</span>':'')+'</td><td>'+(part[2]==="l"?"lecture":"rappel")+'</td><td class="n">'+x[1].ratees+' / '+x[1].vues+'</td></tr>';
         return; }
       const k=PAR_ID[part[1]]; if(!k) return;
       h+='<tr><td><span lang="ja" style="font-family:var(--kana);font-size:22px;font-weight:600">'+car(k,part[0])+'</span> '+k.romaji+'</td><td>'+(part[2]==="l"?"lecture":"écriture")+'</td><td class="n">'+x[1].ratees+' / '+x[1].vues+'</td></tr>';
@@ -1605,7 +1610,7 @@ function dessinerVocab(){
     html+='<h3>'+th.nom+'<small>'+ms.length+'</small></h3>';
     ms.forEach(function(m){
       html+='<button type="button" class="mot" data-id="'+m.id+'"><span class="pt" data-m="'+niveauMot(m)+'"></span>'+
-        '<span class="jp"><b lang="ja">'+m.kana+'</b><span>'+(m.kanji?'<i lang="ja">'+m.kanji+'</i>':'')+m.romaji+'</span></span>'+
+        '<span class="jp"><b lang="ja">'+(m.kanji||m.kana)+'</b><span>'+(m.kanji?'<i lang="ja">'+m.kana+'</i>':'')+m.romaji+'</span></span>'+
         '<span class="fr">'+m.fr+'</span></button>';
     });
   });
